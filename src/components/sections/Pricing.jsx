@@ -44,7 +44,7 @@ function Pricing() {
         { text: 'CMS integration', included: true },
         { text: 'Basic custom functionality', included: true }
       ],
-      popular: true
+      popular: false
     },
     {
       name: 'Premium',

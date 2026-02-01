@@ -1,11 +1,4 @@
 function About() {
-  const skills = [
-    { name: 'HTML/CSS', level: 95 },
-    { name: 'JavaScript/React', level: 90 },
-    { name: 'Node.js/Backend', level: 85 },
-    { name: 'WordPress/CMS', level: 90 }
-  ]
-
   const stats = [
     { number: '50+', label: 'Projects Completed' },
     { number: '5+', label: 'Years Experience' },
@@ -46,32 +39,18 @@ function About() {
 
         <div className="skills-section-inner">
           <h3>Our Expertise</h3>
-          <div className="skills-grid">
-            <div className="skills-bars">
-              {skills.map((skill, index) => (
-                <div key={index} className="skill-item">
-                  <div className="skill-header">
-                    <span className="skill-name">{skill.name}</span>
-                    <span className="skill-level">{skill.level}%</span>
-                  </div>
-                  <div className="skill-bar">
-                    <div className="skill-progress" style={{ width: `${skill.level}%` }}></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="tech-stack">
-              <h4>Technologies We Use</h4>
-              <div className="tech-tags">
-                <span className="tech-tag">React</span>
-                <span className="tech-tag">Next.js</span>
-                <span className="tech-tag">Node.js</span>
-                <span className="tech-tag">WordPress</span>
-                <span className="tech-tag">MongoDB</span>
-                <span className="tech-tag">PostgreSQL</span>
-                <span className="tech-tag">Tailwind CSS</span>
-                <span className="tech-tag">TypeScript</span>
-              </div>
+          <div className="tech-stack">
+            <div className="tech-tags">
+              <span className="tech-tag">HTML</span>
+              <span className="tech-tag">CSS</span>
+              <span className="tech-tag">JavaScript</span>
+              <span className="tech-tag">React</span>
+              <span className="tech-tag">Next.js</span>
+              <span className="tech-tag">Node.js</span>
+              <span className="tech-tag">MongoDB</span>
+              <span className="tech-tag">PostgreSQL</span>
+              <span className="tech-tag">Tailwind CSS</span>
+              <span className="tech-tag">TypeScript</span>
             </div>
           </div>
         </div>

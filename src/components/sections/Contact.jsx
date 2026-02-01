@@ -1,16 +1,25 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import emailjs from '@emailjs/browser'
+
+// EmailJS Configuration - Replace these with your actual EmailJS credentials
+const EMAILJS_SERVICE_ID = 'service_4prcx2n'    // e.g., 'service_abc123'
+const EMAILJS_TEMPLATE_ID = 'template_f1l247d'  // e.g., 'template_xyz789'
+const EMAILJS_PUBLIC_KEY = 'WOgM0jq5rxor4t_gz'    // e.g., 'abcdefghijk123'
 
 function Contact() {
+  const formRef = useRef()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     service: '',
-    message: ''
+    message: '',
+    time: new Date().toISOString(),
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState(null)
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -20,16 +29,30 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    setIsSubmitting(false)
-    setSubmitted(true)
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      service: '',
-      message: ''
-    })
+    setError(null)
+
+    try {
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        EMAILJS_PUBLIC_KEY
+      )
+
+      setSubmitted(true)
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: ''
+      })
+    } catch (err) {
+      console.error('EmailJS Error:', err)
+      setError('Failed to send message. Please try again or contact us directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -71,19 +94,6 @@ function Contact() {
                   <p>+1 (778) 883-3784</p>
                 </div>
               </div>
-
-              {/* <div className="contact-method">
-                <div className="contact-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
-                </div>
-                <div>
-                  <h4>Response Time</h4>
-                  <p>Within 24 hours</p>
-                </div>
-              </div> */}
             </div>
           </div>
 
@@ -106,7 +116,9 @@ function Contact() {
                 </button>
               </div>
             ) : (
-              <form className="contact-form" onSubmit={handleSubmit}>
+              <form ref={formRef} className="contact-form" onSubmit={handleSubmit}>
+                {error && <div className="form-error">{error}</div>}
+
                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="name">Name *</label>
@@ -155,11 +167,11 @@ function Contact() {
                       onChange={handleChange}
                     >
                       <option value="">Select a service</option>
-                      <option value="custom-website">Custom Website</option>
-                      <option value="cms-maintenance">CMS Maintenance</option>
-                      <option value="web-application">Web Application</option>
-                      <option value="landing-page">Landing Page</option>
-                      <option value="other">Other</option>
+                      <option value="Custom Website">Custom Website</option>
+                      <option value="CMS Maintenance">CMS Maintenance</option>
+                      <option value="Web Application">Web Application</option>
+                      <option value="Landing Page">Landing Page</option>
+                      <option value="Other">Other</option>
                     </select>
                   </div>
                 </div>
