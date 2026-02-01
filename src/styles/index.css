@@ -1,24 +1,26 @@
 /* ===== CSS Variables ===== */
+
+/* Dark & Elegant - Deep navy with gold accents */
 :root {
-  --primary: #2563eb;
-  --primary-dark: #1d4ed8;
-  --primary-light: #3b82f6;
-  --secondary: #0f172a;
-  --accent: #06b6d4;
-  --text: #334155;
-  --text-light: #64748b;
-  --text-dark: #1e293b;
+  --primary: #c9a227;
+  --primary-dark: #a88420;
+  --primary-light: #d4b44a;
+  --secondary: #1a1f2e;
+  --accent: #c9a227;
+  --text: #4a5568;
+  --text-light: #718096;
+  --text-dark: #1a202c;
   --bg: #ffffff;
-  --bg-alt: #f8fafc;
-  --bg-dark: #0f172a;
+  --bg-alt: #f7f8fa;
+  --bg-dark: #1a1f2e;
   --border: #e2e8f0;
-  --success: #22c55e;
-  --error: #ef4444;
-  --shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --success: #48bb78;
+  --error: #e53e3e;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --radius: 8px;
-  --radius-lg: 12px;
+  --radius: 6px;
+  --radius-lg: 10px;
   --transition: all 0.3s ease;
 }
 
