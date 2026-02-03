@@ -16,7 +16,7 @@ function Pricing() {
   const packages = [
     {
       name: 'Basic',
-      price: 500,
+      price: 200,
       description: 'Perfect for small businesses and personal projects',
       features: [
         { text: 'Up to 5 pages', included: true },
@@ -32,7 +32,7 @@ function Pricing() {
     },
     {
       name: 'Standard',
-      price: 1500,
+      price: 1000,
       description: 'Ideal for growing businesses needing more features',
       features: [
         { text: 'Up to 10 pages', included: true },
@@ -48,7 +48,7 @@ function Pricing() {
     },
     {
       name: 'Premium',
-      price: 3000,
+      price: 2000,
       description: 'Complete solution for established businesses',
       features: [
         { text: 'Unlimited pages', included: true },
