@@ -1,7 +1,7 @@
 function About() {
   const stats = [
-    { number: '50+', label: 'Projects Completed' },
-    { number: '5+', label: 'Years Experience' },
+    // { number: '50+', label: 'Projects Completed' },
+    // { number: '5+', label: 'Years Experience' },
     { number: '100%', label: 'Client Satisfaction' },
     { number: '24/7', label: 'Support Available' }
   ]
@@ -20,11 +20,11 @@ function About() {
               through thoughtful design and solid development. We believe that every business,
               regardless of size, deserves a professional web presence that truly represents their brand.
             </p>
-            <p>
+            {/* <p>
               With years of experience in web development, we've worked with clients across various
               industries. We take pride in understanding each client's unique needs and delivering
               solutions that exceed expectations.
-            </p>
+            </p> */}
           </div>
 
           <div className="about-stats">

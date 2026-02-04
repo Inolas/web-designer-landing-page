@@ -129,7 +129,7 @@ function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      placeholder="John Doe"
+                      placeholder="Saloni Buddhadeo"
                     />
                   </div>
                   <div className="form-group">
@@ -141,7 +141,7 @@ function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      placeholder="john@example.com"
+                      placeholder="saloni@gmail.com"
                     />
                   </div>
                 </div>
@@ -155,7 +155,7 @@ function Contact() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+1 (778) 883-3784"
                     />
                   </div>
                   <div className="form-group">
