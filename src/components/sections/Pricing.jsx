@@ -25,7 +25,7 @@ function Pricing() {
         { text: 'Basic SEO setup', included: true },
         { text: '2 rounds of revisions', included: true },
         { text: '30 days support', included: true },
-        { text: 'CMS integration', included: false },
+        // { text: 'CMS integration', included: false },
         { text: 'Custom functionality', included: false }
       ],
       popular: false
@@ -37,11 +37,11 @@ function Pricing() {
       features: [
         { text: 'Up to 10 pages', included: true },
         { text: 'Responsive design', included: true },
-        { text: 'Contact form + newsletter', included: true },
+        { text: 'Contact form', included: true }, //+ newsletter
         { text: 'Advanced SEO setup', included: true },
         { text: '4 rounds of revisions', included: true },
         { text: '60 days support', included: true },
-        { text: 'CMS integration', included: true },
+        // { text: 'CMS integration', included: true },
         { text: 'Basic custom functionality', included: true }
       ],
       popular: false
@@ -57,7 +57,7 @@ function Pricing() {
         { text: 'Full SEO optimization', included: true },
         { text: 'Unlimited revisions', included: true },
         { text: '90 days support', included: true },
-        { text: 'CMS with custom features', included: true },
+        // { text: 'CMS with custom features', included: true },
         { text: 'Advanced custom functionality', included: true }
       ],
       popular: false
