@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://inolas.ca/sitemap.xml
