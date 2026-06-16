@@ -16,7 +16,7 @@ function Pricing() {
   const packages = [
     {
       name: 'Basic',
-      price: 200,
+      price: 500,
       description: 'Perfect for small businesses and personal projects',
       features: [
         { text: 'Up to 5 pages', included: true },
